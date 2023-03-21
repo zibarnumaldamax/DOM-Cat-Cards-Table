@@ -79,6 +79,15 @@ const cats = [
         "favourite": true,
         "description": "Немного боязливый, но очень добрый и нежный кот Светлячок. Приучен к лотку и когтеточке, ладит с детьми, привит. Станет вам хорошим другом",
         "id": 9
+    },
+    {
+        "name": "Луна",
+        "img_link": "https://media.tenor.com/EYUlar2QIe4AAAAd/plink.gif",
+        "age": 3,
+        "rate": 9000,
+        "favourite": true,
+        "description": "Луна прекрасная кошка. Она плинкает. И плонкает. Плинкай вместе с ней.",
+        "id": 10
     }
 ]
 
@@ -103,6 +112,7 @@ for (element of cats){
 function newCell(tr){
     let td = document.createElement('td');
     let catCard = document.createElement("div");
+    tr.append(td);
 
     //Имя
     let nameField = document.createElement("p");
@@ -140,7 +150,7 @@ function newCell(tr){
 
     catCard.append(nameField, photoField, ageField, rateField, favouriteField, favouriteFieldCheckBox, descriptionField, idField);
     td.append(catCard);
-    tr.append(td);
+    
 }
 
 body.prepend(table);
